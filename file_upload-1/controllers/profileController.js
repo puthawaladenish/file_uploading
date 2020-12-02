@@ -55,9 +55,8 @@ const upload = multer({storage : storage});
 
  //get all data api
   
- router.get('/view',(req,res) => {
-     profile.find({id:req._id},
-        (error,result) => {
+ router.get('/viewAll',(req,res) => {
+     profile.find((error,result) => {
             if(error){
                 res.json({
                     status:false,

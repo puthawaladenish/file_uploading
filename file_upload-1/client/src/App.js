@@ -7,11 +7,14 @@ import Popper from 'popper.js';
 import'bootstrap/dist/js/bootstrap.bundle.min';
 import CreateProfile from './pages/CreateProfile'
 import Navbar from './components/Navbar'
+import ViewProfile from './pages/ViewProfiles'
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <CreateProfile/> */}
+      <CreateProfile/>
+      <ViewProfile/>
     </div>
   );
 
