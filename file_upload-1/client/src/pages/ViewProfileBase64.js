@@ -3,9 +3,9 @@ import axios from 'axios'
 import Table from 'react-bootstrap/Table'
 
 
-function ViewProfiles() {
+export default function ViewProfiles() {
     useEffect(() => {   
-       axios.get('http://localhost:4000/api/profile/viewAll')
+       axios.get('http://localhost:4000/api/profilee/viewAll')
        .then((data)=>{
            const result = data.data.result
            setTabledata(result)
@@ -16,7 +16,7 @@ function ViewProfiles() {
     }, [])
     
     const [tabledata, setTabledata] = useState([])
-    const host = 'http://localhost:4000/'
+
     // const img_path = require('../image/')
     return (
         <div>
@@ -26,27 +26,24 @@ function ViewProfiles() {
                 <thead>
                     <tr>
                         <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Gender</th>
-                        <th>Address</th>
+                        <th>Last Name</th>                        
+                        <th>City</th>
                         <th>photo</th>
                         <th colSpan="2">Action</th>
                     </tr>
                 </thead>
                 <tbody> 
-                   
                 {tabledata.map((item) => 
                     <tr>
                     <td>{item.firstName}</td>
                     <td>{item.lastName}</td>
-                    <td>{item.gender}</td>
-                    <td>{item.address}</td>
-                    <td><img src={`${host}${item.photo}`} alt = {`Profile pic of ${item.firstName}`} width="25px" height="25px"/></td>
+                    <td>{item.city}</td>
+                    <td><img src={`data:image/jpeg;base64,${item.img_file}`} alt = {`Profile pic of ${item.img_name}`} width="25px" height="25px"/></td>
                     <td><button >Edit</button></td>
                     <td><button >Delete</button></td>
                 </tr>
                 )}
-                    
+                
                 </tbody>
 
             </Table>
@@ -54,4 +51,3 @@ function ViewProfiles() {
     )
 }
 
-export default ViewProfiles

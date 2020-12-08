@@ -8,13 +8,16 @@ import'bootstrap/dist/js/bootstrap.bundle.min';
 import CreateProfile from './pages/CreateProfile'
 import Navbar from './components/Navbar'
 import ViewProfile from './pages/ViewProfiles'
+import CreateProfileBase64 from "../src/pages/CreateProfileBase64";
+import ViewProfileBase64 from "../src/pages/ViewProfileBase64"
 
 function App() {
   return (
     <div className="App">
-      {/* <CreateProfile/> */}
-      <CreateProfile/>
-      <ViewProfile/>
+      {/* <CreateProfile/>
+      <ViewProfile/> */}
+      <CreateProfileBase64/>
+      <ViewProfileBase64/>
     </div>
   );
 

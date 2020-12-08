@@ -4,7 +4,7 @@ const router = require('express').Router();
 const bodyParser = require('body-parser');
 const profile = require('../models/profile');
 
-
+//========normal image uploading=======
 const multer = require('multer');
  
 //storeage engine
@@ -17,14 +17,16 @@ const upload = multer({storage : storage});
  //middleware
  router.use(bodyParser.json());
  router.use(bodyParser.urlencoded({extended:false}));
+ 
 
+ 
  //router
- router.all('/',(req,res)=>{
-     res.json({
-         status:true,
-         message:'user controller default route'
-     });
- });
+//  router.all('/',(req,res)=>{
+//      res.json({
+//          status:true,
+//          message:'user controller default route'
+//      });
+//  });
 
 
  //create user 
