@@ -6,7 +6,8 @@ const cors = require('cors');
 const port = process.env.PORT || 4000;
 const database = require('./database');
 const profileController = require('./controllers/profileController');
-const profileController2 = require('./controllers/profileControllerbase64')
+const profileController2 = require('./controllers/profileControllerbase64');
+const compressImg = require('./controllers/ImgCompController');
 const path = require('path');
 const fs = require('fs')
 
@@ -21,6 +22,8 @@ app.use('/public',express.static(path.join(__dirname,'public')))
 app.use('/api/profile',profileController);
 // route for base 64 file uploading
 app.use('/api/profilee',profileController2);
+// route for compressed img saving in database
+app.use('/api/compress',compressImg)
 
 //Routes
 app.all('/',(req,res)=>{
