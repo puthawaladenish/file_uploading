@@ -11,7 +11,12 @@ import ViewProfile from './pages/ViewProfiles'
 import CreateProfileBase64 from "../src/pages/CreateProfileBase64";
 import ViewProfileBase64 from "../src/pages/ViewProfileBase64"
 import UseReducer from "./pages/UseReducer";
+<<<<<<< HEAD
 import CakeContainer from './Redux/CakeContainer';
+=======
+import CDidMount from './MountingLifeCycle/CDidMount';
+import LifecycleA from './UpdatingLifeCycle/LifecycleA';
+>>>>>>> 5669b755115a591200dd2e7f53fc6674246fb20f
 
 function App() {
   return (
@@ -21,7 +26,12 @@ function App() {
       {/* <CreateProfileBase64/>
       <ViewProfileBase64/> */}
       {/* <UseReducer/> */}
+<<<<<<< HEAD
       <CakeContainer/>
+=======
+      {/* <CDidMount/> */}
+      <LifecycleA/>
+>>>>>>> 5669b755115a591200dd2e7f53fc6674246fb20f
     </div>
   );
 
