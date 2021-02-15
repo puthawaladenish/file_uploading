@@ -11,6 +11,7 @@ import ViewProfile from './pages/ViewProfiles'
 import CreateProfileBase64 from "../src/pages/CreateProfileBase64";
 import ViewProfileBase64 from "../src/pages/ViewProfileBase64"
 import UseReducer from "./pages/UseReducer";
+import CakeContainer from './Redux/CakeContainer';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       <ViewProfile/> */}
       {/* <CreateProfileBase64/>
       <ViewProfileBase64/> */}
-      <UseReducer/>
+      {/* <UseReducer/> */}
+      <CakeContainer/>
     </div>
   );
 
